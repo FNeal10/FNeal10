@@ -337,3 +337,37 @@ section{
     margin: 0;
 }
 
+/* TECH-STACK */
+#section-techstack {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.techstack-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -90px; 
+  width: 320px;
+  display: block;
+}
+
+/* Skill text */
+.skill {
+    position: absolute;
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0.8) rotate(var(--rot));
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.skill.show {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rot));
+}
