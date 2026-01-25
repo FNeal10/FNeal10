@@ -3,20 +3,24 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Francis Neal Altares Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media.css">
     </head>
     <body>
         <nav id="desk-nav">
-            <div class="logo">Neal</div>
+            <div class="logo"></div>
             <div>
                 <ul class="nav-links">
-                    <li><a href="#section-hero-profile">Home</a></li>
-                    <li><a href="#section-about">About</a></li>
-                    <li><a href="#section-techstack">Tech Stack</a></li>
-                    <li><a href="#section-projects">Projects</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <!-- <li><a href="#section-techstack">Tech Stack</a></li> -->
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,15 +36,15 @@
                 <div class="menu-links">
                     <ul>
                         <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-                        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                        <li><a href="#techstack" onclick="toggleMenu()">Projects</a></li>
-                        <li><a href="#projects" onclick="toggleMenu()">Contact</a></li>
+                        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                        <!-- <li><a href="#techstack" onclick="toggleMenu()">Projects</a></li> -->
+                        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                     </ul>   
                 </div>
             </div>
         </nav>
 
-        <section id="section-hero-profile">
+        <section id="home">
             <div class="section-pix-container">
                 <img src="./assets/profile-pic.png" alt="Neal Profile Picture" />
             </div>
@@ -62,7 +66,7 @@
                 </div>
         </section>
 
-        <section id="section-about">
+        <section id="experience">
             <div class="about-container">
                 <ul>
                     <li>
@@ -123,17 +127,85 @@
             </div>
         </section>
 
-        <section id="section-techstack">
-            
-            <img src="./assets/man-typing.png" alt="Tech Stack Image" class="techstack-image" />
-            <div id="skills-layer"></div>
+        <section id="projects">
+            <div class="container swiper">
+                <div class="card-wrapper">
+                    <ul class="card-list swiper-wrapper">
+
+                        <li class="card-item swiper-slide">
+                            <a href="https://github.com/FNeal10/Etf-Stocks" class="card-link">
+                                <img src="assets/data.jpg" alt="" class="card-image">
+                                <p class="badge">Data Engineering</p>
+                                <h2 class="card-title">
+                                    End-to-end data pipeline leveraging Python & Selenium for data ingestion, 
+                                    cloud data lake storage (ADLS Gen2 / AWS-ready), 
+                                    dbt and Snowflake for transformations, with CI/CD automated using GitHub Actions. 
+                                </h2>
+                                <button class="material-symbols-outlined card-button">arrow_forward</button>
+                            </a>
+                        </li>
+
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link">
+                                <img src="assets/bible.jpg" alt="" class="card-image">
+                                <p class="badge">Natural Language Processing</p>
+                                <h2 class="card-title">
+                                   NLP pipeline using Python to extract and structure KJV Bible PDF 
+                                    data into books, chapters, and verses, stored in PostgreSQL for downstream analysis.
+                                </h2>
+                                <button class="material-symbols-outlined card-button">arrow_forward</button>
+                            </a>
+                        </li>
+
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link">
+                                <img src="assets/strava.jpg" alt="" class="card-image">
+                                <p class="badge">Webhook / Rest API</p>
+                                <h2 class="card-title">
+                                    Built a real-time data pipeline using Strava webhooks and REST APIs to 
+                                    ingest workout data for analytics and performance insights.
+                                </h2>
+                                <button class="material-symbols-outlined card-button">arrow_forward</button>
+                            </a>
+                        </li>
+
+                         <li class="card-item swiper-slide">
+                            <a href="#" class="card-link">
+                                <img src="assets/warehouse.jpg" alt="" class="card-image">
+                                <p class="badge">Web Development</p>
+                                <h2 class="card-title">
+                                Designed and built a web-based inventory system with C# ASP.NET 
+                                and MS SQL Server to manage inventory, invoicing, and delivery tracking.
+                                </h2>
+                                <button class="material-symbols-outlined card-button">arrow_forward</button>
+                            </a>
+                        </li>
+
+                        <!-- <li class="card-item swiper-slide" style="visibility: hidden;">
+                            <a href="#" class="card-link">
+                                <img src="assets/posture.jpg" alt="" class="card-image">
+                                <p class="badge">AI / ML</p>
+                                <h2 class="card-title">Lorem 
+                                    ipsum dolor sit amet, consectetur adipisicing elit. In enim reiciendis laborum quaerat, 
+                                    sunt, modi, nulla excepturi corrupti cum minima odit natus voluptate esse quas laboriosam 
+                                    possimus? Nisi, ex omnis.</h2>
+                                <button class="material-symbols-outlined card-button">arrow_forward</button>
+                            </a>
+                        </li> -->
+
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+
+                </div>
+            </div>
         </section>
 
-        <section id="section-projects">
-
-        </section>
-
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
         <script src="scripts.js"></script>
+
     </body>
 </html>
 
